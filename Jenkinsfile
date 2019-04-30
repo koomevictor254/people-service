@@ -1,6 +1,6 @@
 def project = 'people-service'
 def appName = 'people-service'
-def tenancy='ccoekenya'
+def tenancy='victorkoom'
 def ocir='fra.ocir.io'
 def imageTag = "${ocir}/${tenancy}/oracleimc/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
@@ -9,7 +9,7 @@ pipeline {
     kubernetes {
       label 'people-service-app-build'
       defaultContainer 'jnlp'
-      yaml """
+      yaml """ccoekenya
 apiVersion: v1
 kind: Pod
 metadata:
